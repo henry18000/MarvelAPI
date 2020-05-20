@@ -4,11 +4,58 @@
              xmlns:local="clr-namespace:MarvelAPI"
              x:Class="MarvelAPI.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout x:Name="listView"
+              Margin="20"
+              ItemSelected="OnItemSelected">
+
+        <Label x:Name="label"
+               Text="Do you think duty and responsibility are some of the most important things? "
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="Center" />
+
+        <Button Text="True"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked1" />
+        <Button Text="False"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked2" />
+        <Label x:Name="label2"
+               Text="Do you think personal freedom can be sacrificed for safety? "
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="Center" />
+
+        <Button Text="True"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked3" />
+        <Button Text="False"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked4" />
+        <Label x:Name="label3"
+               Text="Do you prefer smashing things over thinking logically"
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="Center" />
+
+        <Button Text="True"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked5" />
+        <Button Text="False"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked6" />
+        <Button Text="Submit Results"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="SubmitResults" />
+        <Label Text="{Binding}"/>
+
     </StackLayout>
 
 </ContentPage>
